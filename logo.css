@@ -1,0 +1,236 @@
+:root {
+  --gradient0: hsl(0, 100%, 90%);
+  --gradient1: hsl(40, 100%, 90%);
+  --gradient2: hsl(80, 100%, 90%);
+  --gradient3: hsl(120, 100%, 90%);
+  --gradient4: hsl(160, 100%, 90%);
+  --gradient5: hsl(200, 100%, 90%);
+  --gradient6: hsl(240, 100%, 90%);
+  --gradient7: hsl(280, 100%, 90%);
+  --gradient8: hsl(320, 100%, 90%);
+  --gradient9: hsl(360, 100%, 90%);
+  --background-color: hsl(0, 0%, 8%);
+  --alphabet0: hsl(0, 100%, 90%);
+  --alphabet1: hsl(40, 100%, 90%);
+  --alphabet2: hsl(80, 100%, 90%);
+  --alphabet3: hsl(120, 100%, 90%);
+  --alphabet4: hsl(160, 100%, 90%);
+  --alphabet5: hsl(200, 100%, 90%);
+  --alphabet6: hsl(240, 100%, 90%);
+  --alphabet7: hsl(280, 100%, 90%);
+  --alphabet8: hsl(320, 100%, 90%);
+  --alphabet9: hsl(360, 100%, 90%);
+  --background-color: hsl(0, 0%, 8%);
+}
+
+body{
+  background: var(--background-color);
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: var(--background-color);
+  position: relative;
+  overflow: visible;
+}
+
+
+.logo-box {
+  position: relative;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  font-weight: 700;
+  color: white;
+}
+
+
+.label-box{
+  position:absolute;
+  bottom: 1em;
+  margin-bottom: 1rem;
+  width:83rem;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.label{
+  padding: 0.2em 0.4em 0.3em 0.4em;
+  font-size: 32px;
+  background: linear-gradient(to right, var(--gradient0), var(--gradient1), var(--gradient2), var(--gradient3), var(--gradient4), var(--gradient5), var(--gradient6), var(--gradient7), var(--gradient8), var(--gradient9));
+  color: var(--background-color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.label:hover{
+  color: rgba(232, 232, 232, 1);
+}
+
+
+.logo-stroke, .logo-fill {
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.stroke {
+  color: var(--background-color);
+  text-shadow: -1px -1px 0 var(--my-color), 1px -1px 0 var(--my-color), -1px 1px 0 var(--my-color), 1px 1px 0 var(--my-color);
+  position: relative;
+}
+
+.fill {
+  color: var(--my-color);
+  overflow: hidden;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  align-items: flex-end;
+  height: 0.05em;
+  transition: 0.6s cubic-bezier(0.65, 0.05, 0.36, 1)
+}
+
+.isOn {
+  height: 0.85em;
+}
+
+.isClicked {
+  height: 0.85em;
+  text-shadow: none;
+  transition: 0.3s cubic-bezier(.13, 1.42, .3, 1.64);
+  color: white;
+  z-index: 2;
+  transform: scale(1.5);
+}
+
+.isEmpty {
+  height: 0.85em;
+  transition: 0.3s cubic-bezier(.13, 1.42, .3, 1.64);
+  color: rgba(217, 85, 85, 1);
+  transform: scale(1.1);
+  z-index: 2;
+
+}
+
+.disappear {
+  text-shadow: none;
+}
+
+/* background: linear-gradient(to right, var(--gradient0), var(--gradient1), var(--gradient2), var(--gradient3), var(--gradient4), var(--gradient5), var(--gradient6), var(--gradient7), var(--gradient8), var(--gradient9)); */
+.letter {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.bar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 83em;
+  height: 0.25em;
+  /* background: linear-gradient(to right, #e66465, #9198e5); */
+  background: linear-gradient(to right, var(--gradient0), var(--gradient1), var(--gradient2), var(--gradient3), var(--gradient4), var(--gradient5), var(--gradient6), var(--gradient7), var(--gradient8), var(--gradient9));
+}
+
+.greeting-box {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(103, 103, 103, 1);
+}
+
+.greeting {
+  height: 30%;
+}
+
+.greeting-font {
+  font-family: cursive;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+  word-spacing: 0.3em;
+}
+
+.transition-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.transition-color {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--gradient0), var(--gradient1), var(--gradient2), var(--gradient3), var(--gradient4), var(--gradient5), var(--gradient6), var(--gradient7), var(--gradient8), var(--gradient9));
+  -webkit-mask-image: linear-gradient(to right, black, black, black, transparent);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 150%;
+  -webkit-mask-position: 300%;
+  mask-image: linear-gradient(to right, black, black, black, transparent);
+  mask-repeat: no-repeat;
+  mask-size: 150%;
+  mask-position: 300%;
+  transition: 0.8s;
+}
+
+.start-transition {
+  -webkit-mask-position: 0%;
+}
+
+/* color */
+.style0 {
+  --my-color: var(--alphabet0);
+}
+
+.style1 {
+  --my-color: var(--alphabet1);
+}
+
+.style2 {
+  --my-color: var(--alphabet2);
+}
+
+.style3 {
+  --my-color: var(--alphabet3);
+}
+
+.style4 {
+  --my-color: var(--alphabet4);
+}
+
+.style5 {
+  --my-color: var(--alphabet5);
+}
+
+.style6 {
+  --my-color: var(--alphabet6);
+}
+
+.style7 {
+  --my-color: var(--alphabet7);
+}
+
+.style8 {
+  --my-color: var(--alphabet8);
+}
+
+.style9 {
+  --my-color: var(--alphabet9);
+}
