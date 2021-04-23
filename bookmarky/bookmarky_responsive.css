@@ -55,8 +55,8 @@ table {
 
 /*********** Main CSS ***********/
 body {
-  position:relative;
-  display:flex;
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(35, 39, 42, 1);
@@ -82,13 +82,17 @@ a {
 }
 
 /*************** Title Area ***************/
+body {
+  font-size: 16px;
+}
+
 .css-bigGround {
   border-width: 5px;
   border-radius: 20px;
   border-color: rgba(35, 39, 42, 1);
   background-color: rgba(44, 47, 51, 1);
   border-style: solid;
-  overflow: hidden;
+  overflow-y: hidden;
   position: relative;
 }
 
@@ -110,7 +114,7 @@ a {
   background-color: var(--hlColor);
 }
 
-.invert{
+.invert {
   background-color: var(--mainColor) !important;
   color: var(--hlColor) !important;
 }
@@ -139,7 +143,7 @@ a {
 }
 
 .css-btnName {
-  font-size: 72px;
+  font-size: 4.5em;
   color: var(--mainColor);
   font-weight: bold;
 }
@@ -148,7 +152,7 @@ a {
   color: var(--mainColor);
   position: absolute;
   bottom: 90%;
-  left: 93%;
+  right: 3%;
   font-size: 16px;
   border: 1.5px solid var(--mainColor);
   border-radius: 10px;
@@ -165,7 +169,7 @@ a {
 }
 
 .css-btnBigMain input {
-  font-size: 60px;
+  font-size: 3.75em;
   font-weight: bold;
   border-width: 0px;
   border-bottom-width: 4px;
@@ -189,8 +193,8 @@ a {
 .css-btnThemeBtn {
   display: inline-block;
   box-sizing: border-box;
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
   background-color: transparent;
   border: 3px solid var(--mainColor);
 }
@@ -206,8 +210,8 @@ a {
 .css-btnThemeBtn_selected {
   display: inline-block;
   box-sizing: border-box;
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
   background-color: var(--mainColor);
   border: 3px solid var(--mainColor);
 }
@@ -217,11 +221,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 .css-btnForm input {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: bold;
   border-width: 0px;
   border-bottom-width: 2px;
@@ -248,7 +252,7 @@ a {
   padding-left: 8px;
   padding-right: 8px;
   color: var(--mainColor);
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: bold;
   border: 1px solid var(--mainColor);
   border-radius: 10px;
@@ -269,7 +273,7 @@ a {
   position: absolute;
   top: 90%;
   left: 94%;
-  font-size: 16px;
+  font-size: 1em;
   border: 1.5px solid var(--mainColor);
   border-radius: 10px;
 }
@@ -281,26 +285,27 @@ a {
 
 /*************** List Area ***************/
 .css-btnList {
-  height: 145px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  height: 8em;
+  height: 7.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 4em;
+  padding-right: 4em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
 .css-btnList li {
-  margin-top: 0.5rem;
+  margin-top: 0.5em;
 }
 
 .css-btnList li button {
   padding: 0px;
-  margin-left: 10px;
-  font-size: 1.2rem;
+  margin-left: 0.5em;
+  font-size: 1em;
   font-weight: bold;
   color: var(--delColor)
 }
@@ -328,7 +333,7 @@ a {
   grid-row: 3/4;
   /* display: grid;
   grid-template-columns: repeat(8, minmax(180px, 1fr)); */
-  display:flex;
+  display: flex;
   justify-content: center;
   column-gap: 10px;
   background-color: rgba(35, 39, 42, 1);
@@ -336,9 +341,9 @@ a {
   border-bottom: 8px solid rgba(35, 39, 42, 1);
   border-left-width: 0px;
   border-right-width: 0px;
-
 }
-.css-smalls{
+
+.css-smalls {
   background-color: rgba(44, 47, 51, 1);
   border-radius: 20px;
   display: flex;
@@ -347,59 +352,125 @@ a {
 }
 
 .css-btnSmall {
-  transition:0.3s;
+  transition: 0.3s;
   color: var(--mainColor);
-  position:relative;
+  position: relative;
   border: 2px solid var(--mainColor);
 }
 
-.css-smallName{
-  font-size:32px;
-  font-weight:bold;
+.css-smallName {
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.css-smallModify{
-  color:inherit;
-  font-size:16px;
+.css-smallModify {
+  color: inherit;
+  font-size: 1em;
   position: absolute;
   transform: translate(65px, -45px);
 }
 
-.css-modalBackground{
+.css-modalBackground {
   position: absolute;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width:100%;
-  height:100%;
-  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 3;
 }
-.css-modal{
-  position:absolute;
+
+.css-modal {
+  position: absolute;
   width: 540px;
   height: 760px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
-
   border-radius: 50px;
   border: 3px solid var(--mainColor);
 }
-.css-btnSave {
-}
 
-.css-btnHome {
+.css-btnSave {}
+
+.css-btnHome {}
+
+.temporal-smallGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .comingSoon {
-  position:absolute;
-  width:1440px;
-  font-size:100px;
-  align-items: center;
-  justify-content: center;
-  color:grey;
-  display:flex;
+  position: absolute;
+  font-size: 3em;
+  font-family: fantasy;
+  font-weight: bold;
+  color: rgba(62, 65, 69, 1);
+  display: flex;
+}
 
+.homepage {
+  font-weight: lighter;
+  color: rgba(144, 53, 55, 1);
+  margin-left: 1.5em;
+}
+
+.homepage:hover {
+  color: rgba(255, 90, 95, 1);
+}
+
+.instagram {
+  color: rgba(20, 78, 55, 1);
+}
+
+.instagram:hover {
+  color: rgba(29, 162, 110, 1);
+}
+
+/*************** Responsive Sizing ***************/
+@media (max-width: 1439px) {
+  .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .css-smallGround {
+    grid-column: auto;
+    grid-row: auto;
+    height: 4em;
+  }
+
+  .css-btnForm input {
+    width: 90%;
+  }
+
+  .css-btnBigMain {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 672px) {
+  body {
+    font-size: 12px;
+  }
+
+  .comingSoon {
+    flex-direction: column;
+    font-size: 2em;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .instagram {
+    display: none;
+  }
+
+  .css-btnList li {
+    font-size: 1.2em;
+    margin-top: 0.1em;
+  }
 }
 
 /*************** Color System ***************/
