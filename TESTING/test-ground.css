@@ -1,0 +1,92 @@
+body {
+  font-size: 1rem;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+.logo-wrapper {
+  /*sizing-information*/
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /*font-information*/
+  font-size: 5em;
+  font-weight: bold;
+  /*color-information*/
+  background-color: white;
+  color: black;
+}
+
+.main-wrapper {
+  /*sizing-information*/
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /*color-information*/
+  background-color: black;
+  color: white;
+}
+
+.node {
+  /*sizing-information*/
+  width: 100%;
+  max-width: 1080px;
+  padding: 2em;
+  /*box-information*/
+  border-width: 6px;
+  border-style: none dashed dashed;
+
+}
+
+.name-space {
+  padding: 0em 0em 1em 0em;
+}
+
+.name {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.instruction p {
+  /*font-information*/
+  font-size: 1.5em;
+  font-weight: bold;
+  /*color-information*/
+}
+
+.instruction ol {
+  padding: 1em 1em 0em 2em;
+  list-style: lower-roman inside;
+}
+
+.instruction ol li {
+  padding-bottom: 0.5em;
+}
+
+.link-space{
+}
+
+.link-space a {
+  /* sizing-informaion */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2em;
+  /* font-informaion */
+  font-size: 1.5em;
+  font-weight: bold;
+  transition-property: background-color, color;
+}
+
+.link-space a:hover {
+  transition: 0.5s;
+  color: black;
+  background-color: white;
+}
