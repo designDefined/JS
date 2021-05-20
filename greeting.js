@@ -19,11 +19,42 @@
   explanationData();
   for (i = 0; i < letters.length; i++) {
     setLetter(i);
+    mobileSetLetter(i);
   }
 
   //initiate start
   numberIsNow = randomNumber();
   lifecycle("write-reset");
+
+
+  function mobileSetLetter(index) {
+    const mobileExplanation= document.createElement("div");
+    mobileExplanation.classList.add("mobile-explanation");
+    if (explanations[index]) {
+      mobileExplanation.innerText = explanations[index];
+    } else {
+      mobileExplanation.innerText = "coming soon!"
+    }
+    letters[index].appendChild(mobileExplanation);
+  }
+
+  function setLetter(index) {
+    letters[index].addEventListener("mouseenter", function() {
+      numberIsNow = event.currentTarget.index;
+      isExplanation = true;
+      greeting.style = `color: var(--alphabet${numberIsNow}); font-style: normal`;
+      lifecycle("write-reset");
+    });
+
+    letters[index].addEventListener("mouseleave", function() {
+      numberIsNow = randomNumber();
+      isExplanation = false;
+      greeting.style = "";
+      lifecycle("write-reset");
+    });
+
+    letters[index].index = index;
+  }
 
 
   function lifecycle(status) {
@@ -77,24 +108,6 @@
     }
   }
 
-  function setLetter(index) {
-    letters[index].addEventListener("mouseenter", function() {
-      numberIsNow = event.currentTarget.index;
-      isExplanation = true;
-      greeting.style = `color: var(--alphabet${numberIsNow}); font-style: normal`;
-      lifecycle("write-reset");
-    });
-
-    letters[index].addEventListener("mouseleave", function() {
-      numberIsNow = randomNumber();
-      isExplanation = false;
-      greeting.style = "";
-      lifecycle("write-reset");
-    });
-
-    letters[index].index = index;
-  }
-
   function randomNumber() {
     return Math.floor(Math.random() * proverbs.length);
   }
@@ -107,7 +120,8 @@
 
   function explanationData() {
     explanations[0] = "1. Bookmarky: Bookmark Manager for Multi-Tap User";
-    explanations[1] = "2. NIGHT TIME: May 2021"
+    explanations[1] = "2. Leftover: May 30th"
+    explanations[2] = "3. NIGHT TIME: June 2021"
     explanations[9] = "#TEST GROUND#"
   }
 

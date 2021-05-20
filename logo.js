@@ -15,18 +15,21 @@
     setTransition(i);
   }
 
-  label.addEventListener("click",function(){
+  label.addEventListener("click", function() {
     location.href = "https://www.instagram.com/design_defined.by/";
   });
 
 
   function setReact(index) {
-    strokes[index].addEventListener("mouseover", function() {
-      fills[index].classList.add("isOn");
-    });
-    strokes[index].addEventListener("mouseleave", function() {
-      fills[index].classList.remove("isOn");
-    });
+    if (links[index]) {
+      strokes[index].addEventListener("mouseover", function() {
+        fills[index].classList.add("isOn");
+      });
+      strokes[index].addEventListener("mouseleave", function() {
+        fills[index].classList.remove("isOn");
+      });
+    } else {
+    }
   }
 
   function setTransition(index) {
@@ -72,10 +75,10 @@
       strokes[index].classList.add("disappear");
 
 
-      window.setTimeout(function(){
+      window.setTimeout(function() {
         fills[index].classList.remove("isEmpty");
       }, 300);
-      window.setTimeout(function(){
+      window.setTimeout(function() {
         strokes[index].classList.remove("disappear");
       }, 500);
 

@@ -66,7 +66,6 @@ body {
   position: relative;
 }
 
-
 .letter {
   padding-left: 0.25em;
   padding-right: 0.25em;
@@ -190,28 +189,38 @@ body {
     font-weight: 100;
     letter-spacing: 0.2em;
     word-spacing: 0.3em;
+  }
 
+  .mobile-explanation {
+    display: none;
   }
 }
 
-@media(max-width: 1392px) and (min-width:768px){
-  .logo-box{
-    align-items:flex-start;
-  }
-  .bar-box{
-    justify-content: flex-start;
-    width:1360px;
-  }
-  .bar {
-    margin-left: 2rem;
-    width:1360px;
+@media(max-width: 1392px) and (min-width:768px) {
+  .logo-box {
+    align-items: flex-start;
   }
 
+  .bar-box {
+    justify-content: flex-start;
+    width: 1360px;
+  }
+
+  .bar {
+    margin-left: 2rem;
+    width: 1360px;
+  }
+
+  .transition-box{
+    width:1424px;
+  }
+
+  .mobile-explanation {
+    display: none;
+  }
 }
 
 @media (max-width:767px) {
-
-
   .main-container {
     justify-content: flex-start;
     align-items: flex-start;
@@ -219,7 +228,7 @@ body {
 
   .logo-box {
     position: relative;
-    width:100%;
+    width: 100%;
     height: 100%;
     justify-content: flex-start;
     align-items: stretch;
@@ -227,45 +236,44 @@ body {
   }
 
   .logo-stroke, .logo-fill {
-    left:auto;
+    left: auto;
     bottom: auto;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
 
-  .fill{
-    position:absolute;
-    bottom:0%;
+  .fill {
+    position: absolute;
+    bottom: 0%;
     text-shadow: none;
     color: transparent;
     transition: 0s;
     background-color: transparent;
-    width:100vw;
-    left:-1em;
+    width: 100vw;
+    left: -1em;
     padding-left: 1.25em;
     transition: 1s;
-
+    border-bottom: solid 2px var(--my-color);
   }
 
-  .isClicked{
+  .isClicked {
     transition: 1s;
     background: var(--my-color);
-    color:white;
+    color: white;
   }
 
-  .isEmpty{
+  .isEmpty {
     transition: 1s;
-
-    color:rgba(217, 85, 85, 1);
+    color: rgba(217, 85, 85, 1);
   }
 
-  .label-box{
+  .label-box {
     position: absolute;
     background-color: red;
-    width:100%;
-    height:0.5em;
-    top:10em;
+    width: 100%;
+    height: 0.5em;
+    top: 10em;
     background: linear-gradient(to right, var(--gradient0), var(--gradient1), var(--gradient2), var(--gradient3), var(--gradient4), var(--gradient5), var(--gradient6), var(--gradient7), var(--gradient8), var(--gradient9));
     display: flex;
     justify-content: center;
@@ -279,6 +287,19 @@ body {
 
   .greeting {
     display: none;
+  }
+
+  .mobile-explanation{
+    position: absolute;
+    bottom:5%;
+    left: 100%;
+    width: 240px;
+    text-shadow: none;
+    color: var(--my-color);
+    font-weight: normal;
+    font-size: 1rem;
+
+
   }
 }
 
