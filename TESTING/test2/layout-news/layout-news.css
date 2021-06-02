@@ -1,0 +1,117 @@
+/* Written by DesignDefined */
+html {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.dimension {
+  width: 100%;
+}
+
+.ground {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.floor {
+  width: 100%;
+  max-width: 1080px;
+}
+
+.section_0 {
+  grid-area: section_0;
+}
+
+.section_1 {
+  grid-area: section_1;
+}
+
+.section_2 {
+  grid-area: section_2;
+}
+
+.section_3 {
+  grid-area: section_3;
+}
+
+.section_4 {
+  grid-area: section_4;
+}
+
+.news-module-main_1 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 243px;
+  grid-gap: 36px;
+  grid-template-areas:
+    "section_0 section_0"
+    "section_1 section_2"
+    "section_3 section_3";
+}
+
+.room-slide {
+  display: flex;
+  padding-top: 3em;
+  text-align: center;
+  background-color: rgba(200, 200, 200, 1);
+}
+
+.room-slide div {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.image-slot img {
+  width: 100%;
+}
+
+.news-element-headline .image-text-slot {
+  text-align: right;
+  font-size: 1em;
+  color: grey;
+}
+
+.news-element-headline .title-slot {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.news-element-headline .title-slot h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.news-element-headline .summary-slot {
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+
+.news-element-image-title-summary .title-slot {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.news-element-image-title-summary .title-slot h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.news-element-image-title-summary .summary-slot {
+  line-height: 1.6;
+  margin-bottom: 2em;
+}
+
+.content-slot .layout-colored .ground {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.layout-colored .floor {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.layout-colored .room {
+  background-color: rgba(0, 0, 255, 0.5);
+}
