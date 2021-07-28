@@ -78,8 +78,6 @@ const FlagSystem = {
   },
 
   valueInFlagRange: function valueInFlagRange(value1, value2, flag) {
-    console.log(value1);
-    console.log(value2);
     if (value1 >= flag.start) {
       if (value2 < flag.end) {
         return true;
