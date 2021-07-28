@@ -1,0 +1,49 @@
+<!-- Written by DesignDefined -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Default News Layout </title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../example/basic-reset-and-border-box.css">
+  <link rel="stylesheet" href="layout-news.css">
+</head>
+
+<body class="layout-not-colored">
+  <div class="dimension">
+    <header class="navigator">
+      <div id="home" class="navigator-menu-tap navigator-current">
+        <h3>Home</h3>
+        <div class="select-effect"></div>
+      </div>
+      <div id="search" class="navigator-menu-tap">
+        <h3>Search</h3>
+        <div class="select-effect"></div>
+      </div>
+      <div class="navigator-logo-image">
+        <img src="image/watch_logo_2.png" alt="WATCH">
+      </div>
+      <div class="navigator-logo-text">
+        <h2>WATCH</h2>
+      </div>
+      <div id="account" class="navigator-menu-tap">
+        <h3>Account</h3>
+        <div class="select-effect"></div>
+      </div>
+      <div id="subscribe" class="navigator-menu-tap">
+        <h3>Subscribe</h3>
+        <div class="select-effect"></div>
+      </div>
+    </header>
+    <div class="ground">
+    </div>
+  </div>
+  <script src="../example/buttonEvent.js"></script>
+  <script src="animateNavigator.js"></script>
+  <script src="resizeNavigator.js"></script>
+  <script src="newsSelector.js"></script>
+</body>
+
+</html>

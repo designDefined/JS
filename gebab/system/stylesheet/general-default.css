@@ -1,0 +1,135 @@
+/* Written by DesignDefined */
+/* preset */
+.page-wide {
+  --contentWidth: 1440px;
+  width: 100%;
+  min-width: var(--contentWidth);
+}
+
+.page-normal {
+  --contentWidth: 1280px;
+  width: 100%;
+  min-width: var(--contentWidth);
+}
+
+.page-narrow {
+  --contentWidth: 1080px;
+  width: 100%;
+  min-width: var(--contentWidth);
+}
+
+.page-basic {
+  position: relative;
+  z-index: -2;
+}
+
+.sizing-preset {
+  position: relative;
+  width: 100%;
+  padding-left: calc(50% - var(--contentWidth) / 2);
+  padding-right: calc(50% - var(--contentWidth) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+/* block general */
+.block-center {
+  justify-content: center;
+}
+
+.block-normal {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* sizing */
+.size-fs075 {
+  height: 75vh;
+}
+
+.size-fs {
+  height: 100vh;
+}
+
+.size-fs15 {
+  height: 150vh;
+}
+
+.size-fs20 {
+  height: 200vh;
+}
+
+.size-fitparent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* role */
+.billboard {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: var(--title-font);
+}
+
+.billboard h1 {
+  font-size: 7rem;
+}
+
+.billboard h2 {
+  font-size: 6rem;
+}
+
+.billboard h3 {
+  font-size: 4rem;
+}
+
+.billboard h4 {
+  font-size: 3rem;
+}
+
+.paragraphs {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 4rem;
+  text-align: justify;
+}
+
+/* image */
+.bg-bottom {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 1920px auto;
+}
+
+.bg-top {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 1920px auto;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5{
+  font-size:2.5rem;
+}

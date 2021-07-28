@@ -1,0 +1,42 @@
+/* Written by DesignDefined */
+"use strict";
+
+const HH = {
+  /*Get HTML Object*/
+  get: function get(tag) {
+    return document.querySelector(tag);
+  },
+  /*Create HTML Object*/
+  create: function make(tag){
+    return document.createElement(tag);
+  },
+  /*Set HTML Properties*/
+  setH: function setH(target, html) {
+    target.innerHTML = html;
+  },
+  setC: function setC(target, className) {
+    target.classList.add(className);
+  },
+  setS: function setS(target, style) {
+    target.style.cssText = style;
+  },
+  setI: function setI(target, id) {
+    target.id = id;
+  },
+  /*Delete HTML Properties*/
+  delC: function delC(target, className) {
+    target.classList.remove(className);
+  },
+
+  /*Put HTML Properties*/
+  putH: function putH(target, where) {
+    where.appendChild(target);
+  },
+};
+
+//for Test
+function bark(testedValue){
+  console.log("WAAAGH start!");
+  console.log(testedValue);
+  console.log("WAAAGH end...");
+}

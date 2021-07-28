@@ -1,0 +1,69 @@
+/* Written by DesignDefined */
+.antigravity {}
+
+.fader {
+  position: relative;
+  background-size: 300%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 2s;
+}
+
+.fade-from-right .fader {
+  background-image: linear-gradient(to right, rgba(240, 240, 240, 0), rgba(240, 240, 240, 0), rgba(240, 240, 240, 1), rgba(240, 240, 240, 1));
+  background-position: 0% 50%;
+}
+
+.fade-from-left .fader {
+  background-image: linear-gradient(to left, rgba(240, 240, 240, 0), rgba(240, 240, 240, 0), rgba(240, 240, 240, 1), rgba(240, 240, 240, 1));
+  background-position: 100% 50%;
+}
+
+.fade-from-right .fade-in {
+  background-position: 100% 50%;
+}
+
+.fade-from-right .fade-out {
+  background-position: 0% 50%;
+}
+
+.fade-from-left .fade-in {
+  background-position: 0% 50%;
+}
+
+.fade-from-left .fade-out {
+  background-position: 100% 50%;
+}
+
+.slide {
+  position:relative;
+  opacity: 0;
+  transition: 1s;
+}
+
+.slide-from-top {
+  margin-top: -100px;
+}
+
+.slide-from-bottom {
+  margin-bottom: -100px;
+}
+
+.slide-from-left {
+  margin-left:-100px;
+}
+
+.slide-from-right {
+  margin-right:-100px;
+}
+
+.slide-from-leftbottom{
+  margin-left:-100px;
+  margin-bottom:-100px;
+}
+
+.slide-in {
+  opacity: 1;
+  margin:0px;
+}

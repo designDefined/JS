@@ -1,0 +1,107 @@
+/* Written by DesignDefined */
+"use strict";
+
+// [사용자가 입력할 것들]
+// 블록 타입
+// 내용
+// 배경사진 or 배경색
+// 글자색
+// 글자 크기
+
+// Style에는 무엇을?
+// color, background,
+// z-index
+
+const WB = {};
+WB.mainPage = {
+  title: "설악 테스트",
+  classes: ["page-normal", "page-analogue-noir"],
+  style: "",
+  styleSheets: ["general-default", "interactive-basics", "type/photo-novel", "theme/analogue-noir", "font/analogue"],
+  defaultLine: "",
+  defaultClasses: ["sizing-preset"],
+  defaultStyle: ""
+};
+
+WB.block = [];
+// WB.block[0] = {
+//   parentID: "block-wrapper",
+//   myID: "block0",
+//   line: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+//   prefix: "흠, ",
+//   suffix: " 아마도...",
+//   classes: ["block-center", "sizing-preset", "billboard"],
+//   style: "color: blue;"
+// };
+WB.block[0] = {
+  parentID: "block-wrapper",
+  myID: "block0",
+  line: "제 목",
+  prefix: "",
+  suffix: "",
+  classes: ["block-center", "size-fullscreen", "billboard"],
+  style: ""
+};
+
+WB.block[1] = {
+  //mountain
+  parentID: "block-wrapper",
+  myID: "block1",
+  line: "",
+  prefix: "",
+  suffix: "",
+  classes: ["block-center"],
+  style: ""
+};
+
+WB.block[2] = {
+  //intro text
+  parentID: "block-wrapper",
+  myID: "block2",
+  line: "",
+  prefix: "",
+  suffix: "",
+  classes: ["block-center"],
+  style: ""
+};
+
+WB.block[3] = {
+  //background1
+  parentID: "block-wrapper",
+  myID: "block3",
+  line: "",
+  prefix: "",
+  suffix: "",
+  classes: ["bg-center", "bg-ease-inout"],
+  style: ""
+};
+
+WB.block[4] = {
+  parentID: "block-wrapper",
+  myID: "block4",
+  line: "집의 응달에서, 가까이에 나룻배들이 떠 있는 강가 양지 바른 곳에서, 사라수의 그늘에서, 무화과나무의 그늘에서, 바라문의 아름다운 아들이지 젊은 매인 싯다르타는 역시 바라문의 아들인 친구 고빈다와 함께 자라났다.",
+  prefix: "",
+  suffix: "",
+  classes: ["block-center", "paragraphs"],
+  style: ""
+};
+
+WB.block[5] = {
+  parentID: "block-wrapper",
+  myID: "block5",
+  line: "강가에서 미역을 감거나, 신성한 목욕 재계를 하거나, 신성한 제사를 지낼 때면 그의 밝게 빛나는 어깨가 햇볕에 갈색으로 그을렸다.",
+  prefix: "",
+  suffix: "",
+  classes: ["block-normal", "paragraphs"],
+  style: ""
+};
+
+WB.block[6] = {
+  parentID: "block-wrapper",
+  myID: "block6",
+  line: "",
+  prefix: "<h1>",
+  suffix: "</h1>",
+  classes: ["block-normal", "paragraphs"],
+  style: ""
+};

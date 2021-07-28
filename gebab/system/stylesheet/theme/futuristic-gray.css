@@ -1,0 +1,11 @@
+/* Written by DesignDefined */
+/* Theme: futuristic gray */
+.page-futuristic-gray {
+  --main-color: rgba(240, 240, 240, 1);
+  --anti-color: rgba(49, 60, 66, 1);
+  --title-font: 'Gugi', sans-serif;
+  --normal-font: 'NanumSquare', 'Noto Sans KR', sans-serif;
+  color: var(--main-color);
+  background-color: var(--anti-color);
+  font-family: var(--normal-font);
+}

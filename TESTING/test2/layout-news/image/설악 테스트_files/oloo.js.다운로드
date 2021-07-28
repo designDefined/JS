@@ -1,0 +1,29 @@
+/* Written by DesignDefined */
+"use strict";
+
+const OLOO = {
+  pChain: function pChain() {
+    const inputLength = arguments.length;
+    if (inputLength >= 2) {
+      for (let i = 0; i < inputLength - 1; i++) {
+        Object.setPrototypeOf(arguments[i + 1], arguments[i]);
+      }
+    } else {
+      alert("pChain Failed");
+    }
+  },
+  verifyChain: function verifyChain() {
+    const inputLength = arguments.length;
+    if (inputLength >= 1) {
+      for (let i = 0; i < inputLength; i++) {
+        const obj = arguments[i];
+        const prototype = Object.getPrototypeOf(arguments[i]);
+        console.log("Prototype of");
+        console.dir(obj);
+        console.log("is");
+        console.dir(prototype);
+      }
+    } else {
+    }
+  }
+}

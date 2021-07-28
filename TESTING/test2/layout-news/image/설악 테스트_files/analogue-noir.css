@@ -1,0 +1,12 @@
+/* Written by DesignDefined */
+/* Theme: Analogue Noir */
+
+.page-analogue-noir{
+  --main-color: rgba(240,240,240,1);
+  --anti-color: rgba(22,22,22,1);
+  --title-font: 'Eulyoo1945-SemiBold', serif;
+  --normal-font: 'GyeonggiBatang', serif;
+  color: var(--main-color);
+  background-color: var(--anti-color);
+  font-family: var(--normal-font);
+}

@@ -1,0 +1,151 @@
+/* Written by DesignDefined */
+"use strict";
+
+const wrapperClassName = "#block-wrapper";
+
+const CommonBuildFunction = {
+  addLine: function addLine(obj, lines) {
+    if (lines) {
+      HH.setH(obj, lines);
+    }
+  },
+  addId: function addId(obj, id) {
+    if (id) {
+      HH.setI(obj.id);
+    }
+  },
+  addClasses: function addClasses(obj, classes) {
+    if (classes) {
+      classes.forEach(function(className) {
+        HH.setC(obj, className);
+      }, this);
+    }
+  },
+  addStyle: function addStyle(obj, style) {
+    if (style) {
+      HH.setS(obj, style);
+    }
+  }
+}
+
+const PagePreset = {
+  titleObject: HH.get("title"),
+  wrapperObject: HH.get(wrapperClassName),
+  defaultLine: "",
+  defaultClasses: [],
+  defaultStyle: "",
+
+  setTitle: function setTitle(titleText) {
+    this.addLine(this.titleObject, titleText)
+  },
+  loadCSS: function loadCSS(sheetName) {
+    const head = HH.get("head");
+    const linkObject = HH.create("link");
+    const link = `system/stylesheet/${sheetName}.css`;
+    linkObject.type = "text/css";
+    linkObject.rel = "stylesheet";
+    linkObject.href = link;
+    HH.putH(linkObject, head);
+  },
+  loadAllCSS: function loadAllCSS(sheets) {
+    const sheetArray = sheets;
+    if (sheetArray) {
+      sheetArray.forEach(this.loadCSS, this);
+    }
+  },
+  loadClassesAndStyle: function loadClassesAndStyle(classes, style) {
+    this.addClasses(this.wrapperObject, classes);
+    this.addStyle(this.wrapperObject, style);
+  },
+  setDefault: function setDefault(page) {
+    this.defaultLine = page.defaultLine;
+    this.defaultClasses = page.defaultClasses;
+    this.defaultStyle = page.defaultStyle;
+  },
+  prepare: function preparePage(inputPage) {
+    const page = inputPage;
+    this.setTitle(page.title);
+    this.loadAllCSS(page.styleSheets);
+    this.loadClassesAndStyle(page.classes, page.style);
+    this.setDefault(page)
+  }
+};
+
+const BlockBuilder = {
+  blockLineToAdd: function blockLineToAdd(block) {
+    const line = this.defaultLine + block.prefix + block.line + block.suffix;
+    return line;
+  },
+  blockClassesToAdd: function blcokClassesToAdd(block) {
+    const classes = this.defaultClasses.concat(block.classes);
+    return classes;
+  },
+  blockStyleToAdd: function blockStyleToAdd(block) {
+    const style = this.defaultStyle + block.style;
+    return style;
+  },
+  blockIdToAdd: function blockIdToAdd(block) {
+    const id = block.myID;
+    return id;
+  },
+  whereToAdd: function whereToAdd(block) {
+    const parent = HH.get(`#${block.parentID}`);
+    return parent;
+  },
+  build: function build(block) {
+    const parentBlock = this.whereToAdd(block);
+    const childBlock = HH.create("div"),
+      newLine = this.blockLineToAdd(block),
+      newClasses = this.blockClassesToAdd(block),
+      newStyle = this.blockStyleToAdd(block),
+      newId = this.blockIdToAdd(block);
+    this.addLine(childBlock, newLine);
+    this.addId(childBlock, newId);
+    this.addClasses(childBlock, newClasses);
+    this.addStyle(childBlock, newStyle);
+    HH.putH(childBlock, parentBlock);
+  },
+  buildAll: function buildAll(blocks) {
+    blocks.forEach(this.build, this);
+  }
+};
+
+const Loader = {
+  pageData: function pageData() {
+    return WB.mainPage;
+  },
+  blocksData: function blocksData() {
+    return WB.block;
+  }
+};
+
+const Checker = {
+  checkPage: function checkPage(page) {},
+  checkBlock: function checkBlock(blocks) {},
+  checkAll: function checkAll(page, blocks) {
+    this.checkPage(page);
+    this.checkBlock(blocks);
+  }
+};
+
+const Initiator = {
+  startLoading: function startLoading() {},
+  finishLoading: function finishLoading() {},
+  setup: function setup() {
+    const page = this.pageData();
+    const blocks = this.blocksData();
+    this.checkAll(page, blocks);
+    this.startLoading();
+    PagePreset.prepare(page);
+    BlockBuilder.buildAll(blocks);
+    this.finishLoading();
+  }
+};
+
+OLOO.pChain(CommonBuildFunction, PagePreset, BlockBuilder);
+OLOO.pChain(Loader, Checker, Initiator);
+Initiator.setup();
+
+
+// 남은 것들
+// 1. 체크 메서드
