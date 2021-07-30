@@ -3,7 +3,7 @@
 
 const WB = {};
 WB.mainPage = {
-  title: "프로젝트_개밥바라기",
+  title: "(Desktop Only) 프로젝트_개밥바라기",
   classes: ["page-basic", "page-normal", "page-futuristic-gray"],
   style: "",
   styleSheets: ["effect/interactive-basics", "type/photo-novel", "theme/futuristic-gray", "font/futuristic"],
@@ -48,11 +48,11 @@ WB.block[2] = {
 WB.block[3] = {
   parentID: "block-wrapper",
   myID: "block_2",
-  line: "주의: 아래의 모든 프로젝트는 노-베이스의 초심자들을 주축으로 진행됩니다. 이미 경험이나 기술을 쌓은 참가자들은 알아도 모른척 해야 한다는 사실을 명심하시기 바랍니다.",
+  line: "※알림<br>아래의 세 프로젝트는 모두 독립적으로 진행되며,<br>노-베이스의 코딩 초보자들이라도 지원할 수 있습니다.<br>자세한 문의는 designdefined.by@gmail.com",
   prefix: "",
   suffix: "",
   classes: ["block-center", "paragraphs", "size-fs075", "slide", "slide-from-left"],
-  style: "color:rgba(255, 135, 135, 1); background-color:rgba(77, 24, 24, 1);"
+  style: "color:rgba(255, 135, 135, 1); background-color:rgba(77, 24, 24, 1); text-align:center"
 };
 
 WB.block[4] = {
