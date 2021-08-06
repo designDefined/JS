@@ -87,8 +87,8 @@
 
   function setLink() {
     links[0] = "https://designdefined.github.io/JS/bookmarky/";
-    links[1] = "";
-    links[2] = "";
+    links[1] = "https://designdefined.github.io/JS/bmk2/";
+    links[2] = "https://designdefined.github.io/JS/gebab/";
     links[3] = "";
     links[4] = "";
     links[5] = "";

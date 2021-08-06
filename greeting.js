@@ -120,8 +120,9 @@
 
   function explanationData() {
     explanations[0] = "1. Bookmarky: Bookmark Manager for Multi-Tap User";
-    explanations[1] = "2. Leftover: May 30th"
-    explanations[2] = "3. NIGHT TIME: June 2021"
+    explanations[1] = "2. Bookmarky v.2"
+    explanations[2] = "3. <Project : Dogfooding> Introduction Page"
+    explanations[3] = "4. (Coming Soon) Writer's Block: Oct. 2021"
     explanations[9] = "#TEST GROUND#"
   }
 
