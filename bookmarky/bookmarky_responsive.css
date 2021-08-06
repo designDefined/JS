@@ -430,6 +430,13 @@ body {
   color: rgba(29, 162, 110, 1);
 }
 
+.save{
+  cursor:pointer;
+}
+.save:hover{
+  color:lightblue;
+}
+
 /*************** Responsive Sizing ***************/
 @media (max-width: 1439px) {
   .container {
