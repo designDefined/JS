@@ -1,0 +1,544 @@
+/*********** Main CSS ***********/
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(35, 39, 42, 1);
+}
+
+button {
+  border-width: 0px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(2, minmax(720px, 1fr));
+  grid-template-rows: minmax(280px, 3fr) minmax(280px, 3fr) 140px;
+  background-color: rgba(35, 39, 42, 1);
+}
+
+/*************** Title Area ***************/
+body {
+  font-size: 16px;
+}
+
+.css-bigGround {
+  border-width: 5px;
+  border-radius: 20px;
+  border-color: rgba(35, 39, 42, 1);
+  background-color: rgba(44, 47, 51, 1);
+  border-style: solid;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.css-effBig {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+  background-color: var(--mainColor);
+  transition: all .5s ease;
+  z-index: 1;
+}
+
+.filling {
+  bottom: 0%;
+}
+
+.whitening {
+  background-color: var(--hlColor);
+}
+
+.invert {
+  background-color: var(--mainColor) !important;
+  color: var(--hlColor) !important;
+}
+
+.css-btnBig {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 0.8fr;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all .5s ease;
+  z-index: 2;
+}
+
+.css-btnBig ::selection {
+  color: var(--hlColor);
+  background-color: var(--mainColor);
+}
+
+.css-btnBigMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.css-btnName {
+  font-size: 4.5em;
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
+.css-btnNameBtn {
+  color: var(--mainColor);
+  position: absolute;
+  bottom: 90%;
+  right: 3%;
+  font-size: 16px;
+  border: 1.5px solid var(--mainColor);
+  border-radius: 10px;
+}
+
+.css-btnNameBtn:hover {
+  color: var(--hlColor);
+  background-color: var(--mainColor);
+}
+
+.css-btnNameBtn:active {
+  background-color: var(--mainColor);
+  color: var(--hlColor);
+}
+
+.css-btnBigMain input {
+  font-size: 3.75em;
+  font-weight: bold;
+  border-width: 0px;
+  border-bottom-width: 4px;
+  border-color: var(--mainColor);
+  color: var(--mainColor);
+  background-color: transparent;
+  text-align: center;
+}
+
+.css-btnTheme {
+  position: absolute;
+  bottom: 90%;
+  width: 50%;
+  height: 26px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.css-btnThemeBtn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-color: transparent;
+  border: 3px solid var(--mainColor);
+}
+
+.css-btnTheme .filled {
+  background-color: var(--mainColor);
+}
+
+.css-btnThemeBtn:hover {
+  background-color: var(--mainColor);
+}
+
+.css-btnThemeBtn_selected {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  background-color: var(--mainColor);
+  border: 3px solid var(--mainColor);
+}
+
+/*************** Input Area ***************/
+.css-btnForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.css-btnForm input {
+  font-size: 1.5em;
+  font-weight: bold;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-color: var(--mainColor);
+  background-color: transparent;
+  color: var(--mainColor);
+}
+
+.css-btnForm input::placeholder {
+  color: var(--mainColor);
+}
+
+.css-inputName {
+  margin-right: 10px;
+}
+
+.css-inputLink {
+  margin-left: 10px;
+}
+
+.css-submitForm {
+  margin-left: 5px;
+  padding-top: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: var(--mainColor);
+  font-size: 1em;
+  font-weight: bold;
+  border: 1px solid var(--mainColor);
+  border-radius: 10px;
+}
+
+.css-submitForm:hover {
+  color: var(--hlColor);
+  background-color: var(--mainColor);
+}
+
+.css-submitForm:active {
+  background-color: var(--mainColor);
+  color: var(--hlColor);
+}
+
+.css-resetBtn {
+  color: var(--mainColor);
+  position: absolute;
+  top: 90%;
+  left: 94%;
+  font-size: 1em;
+  border: 1.5px solid var(--mainColor);
+  border-radius: 10px;
+}
+
+.css-resetBtn:hover {
+  color: var(--hlColor);
+  background-color: var(--mainColor);
+}
+
+/*************** List Area ***************/
+.css-btnList {
+  height: 8em;
+  height: 7.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 4em;
+  padding-right: 4em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.css-btnList li {
+  margin-top: 0.5em;
+}
+
+.css-btnList li button {
+  padding: 0px;
+  margin-left: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--delColor)
+}
+
+.css-btnList li button:hover {
+  color: var(--subColor);
+}
+
+.css-btnList a {
+  color: var(--mainColor);
+}
+
+.css-btnList a:visited {
+  color: var(--mainColor);
+}
+
+.css-btnList a:hover {
+  color: var(--subColor);
+  text-decoration: underline;
+}
+
+/*************** Small Buttons ***************/
+.css-smallGround {
+  position: relative;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  justify-content: space-around;
+  display: flex;
+  column-gap: 10px;
+  background-color: rgba(35, 39, 42, 1);
+  border-top: 8px solid rgba(35, 39, 42, 1);
+  border-bottom: 8px solid rgba(35, 39, 42, 1);
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+.css-logo {
+  position: relative;
+  width: 35%;
+  background: no-repeat center/80% url("img/bmk_logo_dark.png");
+}
+
+.css-btnSmall {
+  background-color: rgba(44, 47, 51, 1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  transition: 0.1s;
+  position: relative;
+  transition: 0.5s;
+  color: rgba(110, 110, 120, 1);
+  font-size: 3em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.css-btnSmall:hover {
+  background-color: var(--mainColor);
+  color: var(--hlColor);
+}
+
+.css-currentTap {
+  border: 0px;
+  background-color: rgba(35, 39, 42, 1);
+  color: var(--mainColor);
+}
+
+.css-currentTap:hover {
+  border: 0px;
+  background-color: rgba(35, 39, 42, 1);
+  color: var(--mainColor);
+  cursor: auto;
+}
+
+.css-btnSetting {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: no-repeat center url("img/settings.svg");
+  right: 10%;
+  top: 10%;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.css-btnHome {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: no-repeat center/100% url("img/home.svg");
+  right: 10%;
+  bottom: 10%;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.css-btnSetting:hover {
+  background-color: rgba(65, 65, 65, 1);
+}
+
+.css-btnHome:hover {
+  background-color: rgba(65, 65, 65, 1);
+}
+
+.homepage {
+  font-weight: lighter;
+  color: rgba(144, 53, 55, 1);
+  margin-left: 1.5em;
+  cursor: pointer;
+}
+
+.homepage:hover {
+  color: rgba(255, 90, 95, 1);
+}
+
+.instagram {
+  color: rgba(20, 78, 55, 1);
+  cursor: pointer;
+}
+
+.instagram:hover {
+  color: rgba(29, 162, 110, 1);
+}
+
+/*************** Modal ***************/
+.css-modalGround {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.css-modal {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-color: rgba(35, 39, 42, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+  padding-top: 24px;
+}
+
+.css-modal-button {
+  font-size: 32px;
+  font-weight: bold;
+  width: 75%;
+  color: rgba(200, 200, 210, 1);
+  margin-top: 20px;
+  text-align: center;
+  cursor:pointer;
+}
+
+.css-modal-textbox {
+  width: 80%;
+  height: 150px;
+  background-color: rgba(44, 47, 51, 1);
+}
+
+#close-button{
+  position:absolute;
+  width:32px;
+  height:32px;
+  top:5%;
+  right:5%;
+  font-size:20px;
+  color: rgba(255, 129, 129, 1);
+  cursor:pointer;
+}
+
+#close-button:hover{
+  color:rgba(230, 81, 81, 1);
+}
+
+#save-button:hover {
+  color: rgba(255, 90, 95, 1);
+}
+
+#load-button:hover {
+  color: rgba(0, 133, 138, 1);
+}
+
+#save-textbox {
+  color: rgba(255, 90, 95, 1);
+}
+
+#save-textbox::selection{
+  background-color: rgba(255, 90, 95, 1);
+  color:white;
+}
+
+#load-textbox {
+  color: rgba(0, 133, 138, 1);
+}
+
+#load-textbox::selection{
+  background-color: rgba(0, 133, 138, 1);
+  color:white;
+}
+
+/*************** Responsive Sizing ***************/
+@media (max-width: 1439px) {
+  .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .css-smallGround {
+    grid-column: auto;
+    grid-row: auto;
+    height: 120px;
+  }
+
+  .css-btnForm input {
+    width: 90%;
+  }
+
+  .css-btnBigMain {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 672px) {
+  body {
+    font-size: 12px;
+  }
+
+  .css-btnList li {
+    font-size: 1.2em;
+    margin-top: 0.1em;
+  }
+}
+
+/*************** Color System ***************/
+.theme-default {
+  --mainColor: grey;
+  --hlColor: white;
+  --subColor: lightgrey;
+  --delColor: darkred;
+}
+
+.theme-spotifyGreen {
+  --mainColor: rgba(30, 215, 96, 1);
+  --hlColor: rgba(255, 255, 255, 1);
+  --subColor: rgba(29, 185, 84, 1);
+  --delColor: rgba(217, 109, 109, 1);
+}
+
+.theme-airbnbScarlet {
+  --mainColor: rgba(255, 90, 95, 1);
+  --hlColor: rgba(255, 255, 255, 1);
+  --subColor: rgba(0, 133, 138, 1);
+  --delColor: rgba(217, 109, 109, 1);
+}
+
+.theme-ikeaYellow {
+  --mainColor: rgba(255, 218, 26, 1);
+  --hlColor: rgba(255, 255, 255, 1);
+  --subColor: rgba(0, 81, 186, 1);
+  --delColor: rgba(217, 109, 109, 1);
+}
+
+.theme-discordBlue {
+  --mainColor: rgba(114, 137, 218, 1);
+  --hlColor: rgba(255, 255, 255, 1);
+  --subColor: rgba(153, 170, 181, 1);
+  --delColor: rgba(217, 109, 109, 1);
+}
+
+.theme-appleGray {
+  --mainColor: rgba(151, 151, 151, 1);
+  --hlColor: rgba(255, 255, 255, 1);
+  --subColor: rgba(102, 102, 102, 1);
+  --delColor: rgba(217, 109, 109, 1);
+}
+
+.theme-twitchPurple {
+  --mainColor: rgba(100, 65, 165, 1);
+  --hlColor: rgba(255, 255, 255, 1);
+  --subColor: rgba(185, 163, 227, 1);
+  --delColor: rgba(217, 109, 109, 1);
+}
