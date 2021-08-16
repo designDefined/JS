@@ -1,0 +1,38 @@
+/* Written by DesignDefined */
+/* Type: Photo Novel */
+.bg-photo-wrapper {}
+
+.bg-fixed {
+  position: fixed;
+  z-index: -1;
+  padding: 0px;
+}
+
+.bg-photo {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity:0;
+  transition: 1s;
+  transition-property: opacity;
+}
+
+.bg-visible {
+  opacity:1;
+}
+
+.bg-invisible {
+  opacity:0;
+}
+
+.bg-filter-05 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,122 @@
+.page-wrapper {
+  position: absolute;
+  width: 340px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 1s;
+}
+
+.page-wrapper.minimized {
+  transform: translateX(-315px)
+}
+
+.page-area {
+  width: calc(100% - 15px);
+  height: 100%;
+  background-color: var(--bg-color-1);
+  border-right: 5px solid var(--main-color-3);
+  border-radius: 20px;
+}
+
+.page-handle {
+  width: 20px;
+  height: 60px;
+  top: calc(50% - 30px);
+  display: flex;
+  align-items: center;
+  color: var(--main-color-2);
+  background-color: rgba(179, 179, 179, 1);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.page-handle:hover {
+  background-color: rgba(193, 193, 193, 1);
+  color: var(--main-color-1);
+}
+
+.page-title {
+  display: flex;
+  min-height: 60px;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--main-color-1);
+  border-bottom: solid 3px var(--main-color-1);
+}
+
+.page-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: solid 2px var(--main-color-1);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.page-menu-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(119, 119, 119, 1);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  cursor: pointer;
+}
+
+.opened .left-bar-menu-title {
+  color: var(--main-color-1);
+}
+
+.left-bar-menu-title:hover {
+  color: var(--bg-color-1);
+  background-color: var(--main-color-1);
+}
+
+.left-bar-menu-content {
+  display: none;
+  position: relative;
+}
+
+.mini-content {
+  width: 90%;
+  align-self: center;
+}
+
+.opened>.left-bar-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.menu-list {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.menu-list::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: lightgray;
+}
+
+.menu-list::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}

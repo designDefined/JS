@@ -1,0 +1,206 @@
+.mini-title {
+  align-self: flex-start;
+  padding: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+  background-color: white;
+}
+
+.left-bar-area .mini-title {
+  transform: translate(35px, 5px);
+  border-color: var(--main-color-1);
+  border-right-color: var(--main-color-3);
+  border-bottom-color: transparent;
+  color: var(--main-color-1);
+}
+
+.edit-area .mini-title {
+  transform: translate(45px, 5px);
+  border-color: var(--sub-color-1);
+  border-right-color: var(--sub-color-3);
+  border-bottom-color: transparent;
+  color: var(--sub-color-1);
+}
+
+.mini-content {
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.left-bar-area .mini-content {
+  border-top-color: var(--main-color-1);
+  border-left-color: var(--main-color-1);
+  border-bottom-color: var(--main-color-3);
+  border-right-color: var(--main-color-3);
+}
+
+.edit-area .mini-content {
+  border-top-color: var(--sub-color-1);
+  border-left-color: var(--sub-color-1);
+  border-bottom-color: var(--sub-color-3);
+  border-right-color: var(--sub-color-3);
+}
+
+/* selection */
+.left-bar-area ::selection{
+  background-color: var(--main-color-1);
+}
+.block-area ::selection{
+  background-color: var(--sub-color-2);
+}
+.edit-area ::selection{
+  background-color: var(--sub-color-1);
+}
+
+/* input text */
+input[type=text] {
+  width: 90%;
+  height: auto;
+  line-height: normal;
+  padding: .5em .5em;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  font-weight: bold;
+  align-self: center;
+  outline-style: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.left-bar-area input[type=text] {
+  color: var(--text-color-1);
+  border-top-color: var(--main-color-1);
+  border-left-color: var(--main-color-1);
+  border-bottom-color: var(--main-color-3);
+  border-right-color: var(--main-color-3);
+}
+
+.edit-area input[type=text] {
+  color: var(--text-color-1);
+  border-top-color: var(--sub-color-1);
+  border-left-color: var(--sub-color-1);
+  border-bottom-color: var(--sub-color-3);
+  border-right-color: var(--sub-color-3);
+}
+
+#title-input {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#author-input {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#nickname-input {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* input select */
+select {
+  width: 90%;
+  appearance: none;
+  line-height: normal;
+  padding: .5em .5em;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  align-self: center;
+  outline-style: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.left-bar-area select {
+  color: var(--text-color-1);
+  border-top-color: var(--main-color-1);
+  border-left-color: var(--main-color-1);
+  border-bottom-color: var(--main-color-3);
+  border-right-color: var(--main-color-3);
+}
+
+/* textarea */
+textarea {
+  outline-style: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: vertical;
+  padding: 6px;
+  text-align: justify;
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: lightgray;
+}
+
+textarea::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+.edit-area textarea {
+  color: var(--text-color-1);
+  border-top-color: var(--sub-color-1);
+  border-left-color: var(--sub-color-1);
+  border-bottom-color: var(--sub-color-3);
+  border-right-color: var(--sub-color-3);
+}
+
+#text-input {
+  align-self: center;
+  width: 80%;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+/* checkbox */
+/* custom input */
+#order-input {
+  width: calc(197px - 10%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5em .5em;
+  margin-left: 5%;
+  align-self: baseline;
+  font-size: 20px;
+  color: var(--sub-color-3);
+  font-weight: bold;
+}
+
+#order-input .order-before {
+  cursor: pointer;
+}
+#order-input .order-after {
+  cursor: pointer;
+}

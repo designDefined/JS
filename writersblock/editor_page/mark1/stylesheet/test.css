@@ -1,0 +1,17 @@
+.a{
+  width:100vw;
+  height: 100vh;
+  position: relative;
+  display:flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  padding-left: 500px;
+}
+
+.b{
+  position:relative;
+  width:500px;
+  height:500px;
+  background-color: blue;
+}

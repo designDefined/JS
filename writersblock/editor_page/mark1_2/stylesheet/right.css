@@ -1,0 +1,120 @@
+.edit-area {
+  width: 480px;
+  min-width: 480px;
+  height: 100%;
+  background-color: var(--bg-color-1);
+  border-left: 5px solid var(--sub-color-3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.hider{
+  position:absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: var(--sub-color-1);
+  font-size: 20px;
+  font-weight: bold;
+  content: "abcdef";
+}
+
+.hider.invisible{
+  display:none;
+}
+
+.edit-title {
+  display: flex;
+  min-height: 60px;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--sub-color-1);
+  border-bottom: solid 3px var(--sub-color-1);
+}
+
+.edit-info {
+  position:relative;
+  min-height: 240px;
+  border-bottom: solid 3px var(--sub-color-1);
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--sub-color-1);
+}
+
+.edit-info span {
+  display:inline-block;
+  max-width: 200px;
+  font-weight:normal;
+  color: rgba(143, 143, 143, 1);
+}
+
+.edit-menu {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-bottom: solid 2px var(--sub-color-1);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.edit-menu-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(119, 119, 119, 1);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  cursor: pointer;
+}
+
+.opened .edit-menu-title {
+  color: var(--sub-color-1);
+}
+
+.edit-menu-title:hover {
+  color: var(--bg-color-1);
+  background-color: var(--sub-color-1);
+}
+
+.edit-menu-content {
+  display: none;
+  position: relative;
+}
+
+.opened>.edit-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* edit input */
+.edit-mini-title {
+  font-size: 20px;
+  color: black;
+  margin-left: 32px;
+  margin-bottom: 10px;
+}
+
+.edit-mini-content {
+  color: black;
+  margin-left: 32px;
+  margin-bottom: 20px;
+}

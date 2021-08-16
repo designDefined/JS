@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="stylesheet/css-reset.css">
+  <link rel="stylesheet" href="stylesheet/main.css">
+  <link rel="stylesheet" href="stylesheet/left.css">
+  <link rel="stylesheet" href="stylesheet/right.css">
+  <link rel="stylesheet" href="stylesheet/center.css">
+  <link rel="stylesheet" href="stylesheet/input-redesign.css">
+
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div class="top-bar">
+      <div id="project-title" class="top-content">editorUi_testPage_0715</div>
+      <div id="project-menu" class="top-content"></div>
+    </div>
+    <div class="content-wrapper">
+      <div class="page-wrapper">
+        <div class="page-area menu-list">
+          <div class="page-title">Page</div>
+          <div class="page-menu">
+            <div class="page-menu-title">▼ 제목과 필명</div>
+            <div class="page-menu-content">
+              <div class="mini-title"> 페이지 제목</div>
+              <input type="text" id="title-input">
+              <div class="mini-title">작가 이름</div>
+              <input type="text" id="author-input">
+            </div>
+          </div>
+          <div class="page-menu">
+            <div class="page-menu-title">▼ 타입과 테마</div>
+            <div class="page-menu-content">
+              <div class="mini-title">타입</div>
+              <select name="type" id="type-select">
+                <option value="">--타입을 선택하세요--</option>
+                <option value="photo-novel">Photo Novel</option>
+                <option value="digital-museum">Digital Museum</option>
+              </select>
+              <div class="mini-title">테마</div>
+              <select name="theme" id="theme-select">
+                <option value="">--테마를 선택하세요--</option>
+                <option value="analogue-noir">Analogue Noir</option>
+              </select>
+            </div>
+          </div>
+          <div class="page-menu">
+            <div class="page-menu-title">▼ 전체 플러그인</div>
+            <div class="page-menu-content">
+              <div class="mini-title">기본 플러그인</div>
+              <div id="basic-plugins" class="mini-content">
+                <label><input type="checkbox" class="plugin-checkbox basic-plugin-checkbox" id="page-normal">Basic</label>
+              </div>
+              <div class="mini-title">타입 플러그인</div>
+              <div id="type-plugins" class="mini-content">
+                <label><input type="checkbox" class="plugin-checkbox type-plugin-checkbox" id="photo-novel">Photo Novel</label>
+                <label><input type="checkbox" class="plugin-checkbox type-plugin-checkbox" id="digital-museum">Digital Museum</label>
+              </div>
+              <div class="mini-title">테마 플러그인</div>
+              <div id="theme-plugins" class="mini-content">
+                <label><input type="checkbox" class="plugin-checkbox theme-plugin-checkbox" id="analogue-noir">Analogue Noir</label>
+              </div>
+              <div class="mini-title">효과 플러그인</div>
+              <div id="effect-plugins" class="mini-content">
+                <label><input type="checkbox" class="plugin-checkbox effect-plugin-checkbox" id="interactive-basics">Basic</label>
+              </div>
+            </div>
+          </div>
+          <div class="page-menu">
+            <div class="page-menu-title">▼ 불러오기</div>
+          </div>
+          <div class="page-menu">
+            <div class="page-menu-title">▼ 내보내기</div>
+          </div>
+        </div>
+        <div class="page-handle">
+          <span class="page-arrow">◀</span>
+        </div>
+      </div>
+
+      <div class="block-area menu-list">
+        <div class="bg-lane lane"></div>
+        <div class="block-lane lane">
+          <div class="new-block-button">+</div>
+        </div>
+        <div class="fg-lane lane"></div>
+
+      </div>
+      <div class="edit-area menu-list">
+        <div class="edit-title">Block</div>
+        <div class="edit-info">
+          <div class="edit-info-content">순서: <span class="edit-info-order"></span></div>
+          <div class="edit-info-content">별명: <span class="edit-info-nickname"></span></div>
+          <div class="edit-info-content">내용: <span class="edit-info-text"></span></div>
+          <div class="edit-info-content">크기: <span class="edit-info-size"></span></div>
+          <div class="edit-info-content">효과: <span class="edit-info-effect"></span></div>
+          <div class="hider">선택한 블록이 없습니다</div>
+        </div>
+        <div id="edit-basic" class="edit-menu">
+          <div class="edit-menu-title">▼ 기본 설정</div>
+          <div class="edit-menu-content">
+            <div class="mini-title">블록 이름</div>
+            <input type="text" id="nickname-input">
+            <div class="mini-title">배치 순서</div>
+            <div class="mini-content" id="order-input">
+              <div class="order-before">◁</div>
+              <div class="order-number">0</div>
+              <div class="order-after">▷</div>
+            </div>
+            <div class="hider">선택한 블록이 없습니다</div>
+          </div>
+        </div>
+        <div id="edit-text" class="edit-menu">
+          <div class="edit-menu-title">▼ 블록 내용</div>
+          <div class="edit-menu-content">
+            <textarea name="block-text-input" id="text-input" cols="30" rows="15"></textarea>
+            <div class="hider">선택한 블록이 없습니다</div>
+          </div>
+        </div>
+        <div id="edit-style" class="edit-menu">
+          <div class="edit-menu-title">▼ 스타일</div>
+          <div class="edit-menu-content">
+            <div class="hider">선택한 블록이 없습니다</div>
+          </div>
+        </div>
+        <div id="edit-effect" class="edit-menu">
+          <div class="edit-menu-title">▼ 효과</div>
+          <div class="edit-menu-content">
+            <div class="hider">선택한 블록이 없습니다</div>
+          </div>
+        </div>
+        <div id="edit-button" class="edit-menu">
+          <div class="edit-menu-title">▼ 버튼</div>
+          <div class="edit-menu-content">
+            <div class="hider">선택한 블록이 없습니다</div>
+          </div>
+        </div>
+        <div id="edit-background" class="edit-menu">
+          <div class="edit-menu-title">▼ 배경</div>
+          <div class="edit-menu-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="library/junky-javascript.js"></script>
+  <script src="library/html-handler.js"></script>
+  <script src="script/data-engine.js"></script>
+  <script src="script/button-system.js"></script>
+  <script src="script/button-map.js"></script>
+  <script src="script/load.js"></script>
+
+</body>
+
+</html>
