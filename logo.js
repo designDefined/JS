@@ -89,8 +89,8 @@
     links[0] = "https://designdefined.github.io/JS/bookmarky/";
     links[1] = "https://designdefined.github.io/JS/bmk2/";
     links[2] = "https://designdefined.github.io/JS/gebab/";
-    links[3] = "";
-    links[4] = "";
+    links[3] = "https://designdefined.github.io/web-boy/index.html";
+    links[4] = "https://designdefined.github.io/digital-ethnography/view/assignment_01/index.html";
     links[5] = "";
     links[6] = "";
     links[7] = "";
